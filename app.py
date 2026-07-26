@@ -2,8 +2,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-model = joblib.load("models/house_price_model.pkl")
-
+model = model = joblib.load("models/house_price_model.pkl")
 st.title("🏠 California House Price Prediction")
 
 longitude = st.number_input("Longitude", value=-122.23)
@@ -20,7 +19,7 @@ ocean_proximity = st.selectbox(
     ["<1H OCEAN", "INLAND", "ISLAND", "NEAR BAY", "NEAR OCEAN"]
 )
 
-input_df = pd.DataFrame({
+input_data = pd.DataFrame({
     "longitude": [longitude],
     "latitude": [latitude],
     "housing_median_age": [housing_median_age],
@@ -33,5 +32,5 @@ input_df = pd.DataFrame({
 })
 
 if st.button("Predict Price"):
-    prediction = model.predict(input_df)
+    prediction = model.predict(input_data)
     st.success(f"Predicted House Price: ${prediction[0]:,.2f}")
