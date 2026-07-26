@@ -9,9 +9,7 @@ A Machine Learning project that predicts house prices based on various features 
 ### Application Screenshot
 
 ![House Price Prediction App](screenshots/app.png)
-## Application Preview
-
-![Application Screenshot](screenshots/app(1).png)
+![House Price Prediction App](screenshots/app(1).png)
 
 ---
 
